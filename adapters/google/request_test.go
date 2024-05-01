@@ -18,10 +18,7 @@ var (
 )
 
 func init() {
-	err := godotenv.Load("../../.env.local")
-	if err != nil {
-		log.Println("Error loading .env file")
-	}
+	godotenv.Load("../../.env.local")
 
 	googleClientID = cmp.Or(os.Getenv("GOOGLE_CLIENT_ID"), "client_id")
 	googleClientSecret = cmp.Or(os.Getenv("GOOGLE_SECRET"), "secret")

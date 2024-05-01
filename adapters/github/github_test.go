@@ -19,10 +19,7 @@ var (
 )
 
 func init() {
-	err := godotenv.Load("../../.env.local")
-	if err != nil {
-		log.Println("Error loading .env file")
-	}
+	godotenv.Load("../../.env.local")
 
 	gitlabClientID = cmp.Or(os.Getenv("GITHUB_CLIENT_ID"), "client_id")
 	gitlabSecret = cmp.Or(os.Getenv("GITHUB_SECRET"), "secret")
@@ -67,22 +64,6 @@ func TestMyGithub(t *testing.T) {
 	authorizeUrl, err := r.Authorize(state)
 	assert.Nil(t, err)
 	assert.NotNil(t, authorizeUrl)
-}
-
-func TestLogin(t *testing.T) {
-	r := getMyGithub()
-	callback := gauth.AuthCallback{
-		Code:  "1eb6a1db53fd41e6640d",
-		State: "12b87208-fbef-496b-b152-d328078dd746",
-	}
-
-	authToken, err := r.Login(callback)
-
-	if err != nil {
-		log.Printf("Error: %v", err)
-		return
-	}
-	log.Fatalf("Auth token: %v", authToken)
 }
 
 func TestRevoke(t *testing.T) {
