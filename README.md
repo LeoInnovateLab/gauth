@@ -2,6 +2,9 @@
 
 <p align="center">
 It's just a library of third-party authorization tools that make it easy to get rid of the cumbersome third-party login SDKs.
+<br/>
+<br/>
+<a href="https://pkg.go.dev/github.com/LeoInnovateLab/gauth"><img src="https://pkg.go.dev/badge/github.com/LeoInnovateLab/gauth.svg" alt="Go Reference"></a>
 </p>
 
 <div align="center">
