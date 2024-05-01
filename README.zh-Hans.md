@@ -4,7 +4,15 @@
 它是一个第三方授权登录的工具类库，可以让我们脱离繁琐的第三方登录 SDK，让登录变得更加简单。
 <br/>
 <br/>
-<a href="https://pkg.go.dev/github.com/LeoInnovateLab/gauth"><img src="https://pkg.go.dev/badge/github.com/LeoInnovateLab/gauth.svg" alt="Go Reference"></a>
+<a href="https://github.com/LeoInnovateLab/gauth/blob/master/LICENSE">
+  <img alt="GitHub" src="https://img.shields.io/github/license/LeoInnovateLab/gauth"/>
+</a>  
+<a href="https://pkg.go.dev/github.com/LeoInnovateLab/gauth">
+    <img src="https://pkg.go.dev/badge/github.com/LeoInnovateLab/gauth.svg" alt="Go Reference">
+</a>
+<a href="https://goreportcard.com/report/github.com/LeoInnovateLab/gauth">
+    <img src="https://goreportcard.com/badge/github.com/LeoInnovateLab/gauth" />
+</a>
 </p>
 
 <div align="center">
@@ -16,6 +24,7 @@
 </samp>
 </strong>
 </div>
+
 
 ## 内容目录
 

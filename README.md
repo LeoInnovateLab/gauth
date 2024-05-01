@@ -4,7 +4,15 @@
 It's just a library of third-party authorization tools that make it easy to get rid of the cumbersome third-party login SDKs.
 <br/>
 <br/>
-<a href="https://pkg.go.dev/github.com/LeoInnovateLab/gauth"><img src="https://pkg.go.dev/badge/github.com/LeoInnovateLab/gauth.svg" alt="Go Reference"></a>
+<a href="https://github.com/LeoInnovateLab/gauth/blob/master/LICENSE">
+  <img alt="GitHub" src="https://img.shields.io/github/license/LeoInnovateLab/gauth"/>
+</a>  
+<a href="https://pkg.go.dev/github.com/LeoInnovateLab/gauth">
+    <img src="https://pkg.go.dev/badge/github.com/LeoInnovateLab/gauth.svg" alt="Go Reference">
+</a>
+<a href="https://goreportcard.com/report/github.com/LeoInnovateLab/gauth">
+    <img src="https://goreportcard.com/badge/github.com/LeoInnovateLab/gauth" />
+</a>
 </p>
 
 <div align="center">
