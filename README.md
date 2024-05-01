@@ -7,17 +7,19 @@ It's just a library of third-party authorization tools that make it easy to get 
 <div align="center">
 <strong>
 <samp>
-[English](README.md) · [简体中文](README.zh-Hans.md) 
+
+[English](README.md) · [简体中文](README.zh-Hans.md)
+
 </samp>
 </strong>
 </div>
 
 ## Table of Contents
 
-- [Table of Contents](#Table of Contents)
+- [Table of Contents](#table-of-contents)
 - [Introduction](#Introduction)
-- [Currently Supported](#Currently Supported)
-- [Getting Started](#Getting Started)
+- [Currently Supported](#Currently-Supported)
+- [Getting Started](#Getting-Started)
 - [Inspiration](#Inspiration)
 
 ## Introduction
