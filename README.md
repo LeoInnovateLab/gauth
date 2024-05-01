@@ -13,6 +13,9 @@ It's just a library of third-party authorization tools that make it easy to get 
 <a href="https://goreportcard.com/report/github.com/LeoInnovateLab/gauth">
     <img src="https://goreportcard.com/badge/github.com/LeoInnovateLab/gauth" />
 </a>
+<a href="https://github.com/LeoInnovateLab/gauth/actions">
+    <img src="https://github.com/LeoInnovateLab/gauth/actions/workflows/test.yml/badge.svg" />
+</a>
 </p>
 
 <div align="center">
