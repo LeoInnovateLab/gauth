@@ -1,5 +1,7 @@
 package gauth
 
+import "strings"
+
 type AuthUser struct {
 	UID          string         `json:"uid"`
 	Username     string         `json:"username"`
@@ -24,3 +26,20 @@ const (
 	GenderFemale  AuthUserGender = 0
 	GenderUnknown AuthUserGender = -1
 )
+
+func GetRealGender(originalGender string) AuthUserGender {
+	if originalGender == "" || strings.EqualFold(originalGender, "UNKNOWN") {
+		return GenderUnknown
+	}
+	males := map[string]bool{
+		"m":    true,
+		"男":    true,
+		"1":    true,
+		"male": true,
+	}
+	_, ok := males[strings.ToLower(originalGender)]
+	if ok {
+		return GenderMale
+	}
+	return GenderFemale
+}
