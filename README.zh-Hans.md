@@ -47,6 +47,7 @@
 
 * Github
 * Google
+* Facebook
 
 ## 快速入门
 
