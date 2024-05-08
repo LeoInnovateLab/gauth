@@ -85,7 +85,7 @@ func (r *DefaultAuthRequest) GetScopes(separator string, encode bool, defaultSco
 }
 
 func (r *DefaultAuthRequest) DoPostAuthorizationCode(code string) (string, error) {
-	accessTokenUrl := r.accessTokenUrl(code)
+	accessTokenUrl := r.AccessTokenUrl(code)
 
 	resp, err := resty.New().R().Post(accessTokenUrl)
 	if err != nil {
@@ -97,7 +97,7 @@ func (r *DefaultAuthRequest) DoPostAuthorizationCode(code string) (string, error
 	return string(body), nil
 }
 
-func (r *DefaultAuthRequest) accessTokenUrl(code string) string {
+func (r *DefaultAuthRequest) AccessTokenUrl(code string) string {
 	return utils.UrlBuilderFromBaseUrl(r.Source.AccessToken()).
 		QueryParam("code", code).
 		QueryParam("client_id", r.config.ClientId).
