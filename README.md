@@ -47,6 +47,7 @@ making login easier.More third-party authorization are under development.
 * Github
 * Google
 * Facebook
+* Slack
 
 ## Getting Started
 

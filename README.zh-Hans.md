@@ -48,6 +48,7 @@
 * Github
 * Google
 * Facebook
+* Slack
 
 ## 快速入门
 
