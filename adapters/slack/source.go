@@ -2,7 +2,7 @@ package slack
 
 type Slack struct{}
 
-func NewGoogle() *Slack {
+func NewSlack() *Slack {
 	return &Slack{}
 }
 

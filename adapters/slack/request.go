@@ -15,7 +15,7 @@ type AuthRequest struct {
 
 func (a *AuthRequest) NewAuthRequest(c *config.AuthConfig) (gauth.AuthRequest, error) {
 	authRequest := &AuthRequest{}
-	authRequest.DefaultAuthRequest = gauth.NewDefaultAuthRequest(c, NewGoogle(), authRequest)
+	authRequest.DefaultAuthRequest = gauth.NewDefaultAuthRequest(c, NewSlack(), authRequest)
 
 	// Ensure that the AuthRequest instance has implemented all methods of the AuthRequest interface
 	var _ gauth.AuthRequest = authRequest

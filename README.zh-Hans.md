@@ -49,6 +49,7 @@
 * Google
 * Facebook
 * Slack
+* Linkedin
 
 ## 快速入门
 
