@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+
 	"github.com/LeoInnovateLab/gauth"
 	"github.com/LeoInnovateLab/gauth/config"
 	"github.com/LeoInnovateLab/gauth/utils"
@@ -50,15 +51,15 @@ func (a *AuthRequest) GetAccessToken(callback gauth.AuthCallback) (gauth.AuthTok
 	if _, ok := responseMap["error"]; ok {
 		return gauth.AuthToken{},
 			errors.New(fmt.Sprintf("%s:%s",
-				responseMap["error"].(string),
-				responseMap["error_description"].(string)))
+				utils.SafeStringConvert(responseMap["error"]),
+				utils.SafeStringConvert(responseMap["error_description"])))
 	}
 	return gauth.AuthToken{
-		AccessToken: responseMap["access_token"].(string),
-		ExpireIn:    int(responseMap["expires_in"].(float64)),
-		Scope:       responseMap["scope"].(string),
-		TokenType:   responseMap["token_type"].(string),
-		IdToken:     responseMap["id_token"].(string),
+		AccessToken: utils.SafeStringConvert(responseMap["access_token"]),
+		ExpireIn:    utils.SafeIntConvert(responseMap["expires_in"]),
+		Scope:       utils.SafeStringConvert(responseMap["scope"]),
+		TokenType:   utils.SafeStringConvert(responseMap["token_type"]),
+		IdToken:     utils.SafeStringConvert(responseMap["id_token"]),
 	}, nil
 }
 
@@ -88,12 +89,12 @@ func (a *AuthRequest) GetUserInfo(token gauth.AuthToken) (gauth.AuthUser, error)
 
 	return gauth.AuthUser{
 		RawUserInfo: rawUserInfo,
-		UID:         userMap["sub"].(string),
-		Email:       userMap["email"].(string),
-		Username:    userMap["email"].(string),
-		Avatar:      userMap["picture"].(string),
-		Location:    userMap["locale"].(string),
-		Nickname:    userMap["name"].(string),
+		UID:         utils.SafeStringConvert(userMap["sub"]),
+		Email:       utils.SafeStringConvert(userMap["email"]),
+		Username:    utils.SafeStringConvert(userMap["email"]),
+		Avatar:      utils.SafeStringConvert(userMap["picture"]),
+		Location:    utils.SafeStringConvert(userMap["locale"]),
+		Nickname:    utils.SafeStringConvert(userMap["name"]),
 		Token:       token,
 		Gender:      gauth.GenderUnknown,
 		Source:      a.Source.GetSource(),
